@@ -2,12 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact List</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/materialize.min.css">
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
+  <nav>
+    <div class="nav-wrapper row">
+      <div class="col s12">
+        <a href="index.html" class="brand-logo">Contact List</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li>
+              <a class="waves-effect waves-light btn modal-trigger" href="#modal-add">
+                <i class="material-icons">add</i>
+              </a>
+            </li>
+            <li>
+              <a class="waves-effect waves-light btn">
+                <i class="material-icons">search</i>
+              </a>
+            </li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="modal-add" class="modal">
+    <div class="modal-content">
+      <h4>Contact</h4>
+      <div class="row">
+        <form action="" class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="name" type="text" placeholder="Name" class="validate">
+              <label for="name">Name</label>
+            </div>
+            <div class="input-field col s6">
+              <i class="material-icons prefix">phone</i>
+              <input id="phone" type="tel" class="validate">
+              <label for="phone">Phone</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button id="add-btn" class="waves-effect waves-light disabled btn" type="submit">
+        <i class="material-icons right">send</i>
+        Add
+      </button>
+    </div>
+  </div>
   <script src="assets/js/jquery-3.2.1.js"></script>
   <script src="assets/js/materialize.min.js"></script>
   <script src="assets/js/app.js"></script>
